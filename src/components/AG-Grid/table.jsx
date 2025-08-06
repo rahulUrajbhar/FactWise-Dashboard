@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { AgGridReact } from "ag-grid-react";
 import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
+import { IoIosSearch } from "react-icons/io";
 
 import { employees } from "@/lib/data";
 
@@ -45,14 +46,14 @@ export const Table = () => {
         Employees Detail
       </div>
       {/* Global Search Section */}
-      <div className="flex items-center justify-baseline gap-3">
-        <label htmlFor="global-search" className="text-2xl text-gray-700">Global Search</label>
+      <div className="flex items-center justify-start gap-1 bg-gray-200 w-1/5 px-2 py-1 rounded-xl">
+        <IoIosSearch className="text-gray-700 size-7" />
         <input
           id="global-search"
-          className="text-black/80 w-1/5 border-b-amber-700 py-0.5 px-1 text-lg border outline-none rounded"
+          className="text-black/80 w-full border-b-amber-700 py-0.5 px-1 text-lg outline-none rounded"
           type="search"
           value={quickFilterText}
-          placeholder="Search Value..."
+          placeholder="Global Search..."
           onChange={handleChange}
         />
       </div>
